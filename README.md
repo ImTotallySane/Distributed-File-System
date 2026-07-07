@@ -8,17 +8,6 @@ Welcome to the **Distributed File System**, a robust, high-performance Network F
 
 The File System is split into three core components, coordinating via custom TCP protocol packets:
 
-```mermaid
-graph TD
-    Client1[User Client 1] <-->|Metadata / Access / Execution| NM[Naming Server]
-    Client2[User Client 2] <-->|Metadata / Access / Execution| NM
-    Client1 <-->|Direct Read / Write / Stream| SS1[Storage Server 1]
-    Client2 <-->|Direct Read / Write / Stream| SS2[Storage Server 2]
-    SS1 <-->|Replication / Sync / Heartbeat| NM
-    SS2 <-->|Replication / Sync / Heartbeat| NM
-    SS1 <-->|Backup Copy| SS1_Bak[SS1 Backup]
-```
-
 ### 1. Naming Server (NM)
 *   **Central Coordinator:** Acts as the entry point and registry.
 *   **O(1) Filename Lookup:** Uses a custom **djb2 Hash Map** and a **Least-Recently-Used (LRU) Cache** to resolve file-to-server slots in constant time.
