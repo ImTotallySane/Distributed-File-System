@@ -1,4 +1,4 @@
-# Distributed Collaborative File System (NFS)
+# Distributed File System
 
 Welcome to the **Distributed File System**, a robust, high-performance Network File System built in C from the ground up. This system is designed for concurrent, sentence-level document editing and collaboration with enterprise-grade features including role-based access control, transaction undo/checkpointing, hierarchical folder structures, remote shell execution, and automated fault tolerance/replication.
 
