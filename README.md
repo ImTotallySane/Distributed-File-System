@@ -6,7 +6,7 @@ Welcome to the **Distributed File System**, a robust, high-performance Network F
 
 ## 🛠️ System Architecture
 
-The NFS is split into three core components, coordinating via custom TCP protocol packets:
+The File System is split into three core components, coordinating via custom TCP protocol packets:
 
 ```mermaid
 graph TD
